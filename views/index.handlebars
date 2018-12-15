@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+    </div>
+    <div class="col-sm">
+      <img class="burgerImage" src="https://files.gamebanana.com/img/ico/sprays/50de8c55af3d1.png"></img>
+      <h1>Eat Da Burger!</h1>
+    </div>
+    <div class="col-sm">
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm" readonly>
+      {{#each burgers}}
+        {{#unless sleepy}}
+          {{> burgers/burger-block sleep=true}} 
+        {{/unless}}
+      {{/each}}
+    </div>
+    <div class="col-sm">
+    </div>
+    <div class="col-sm">
+      {{#each burgers}}
+        {{#if sleepy}}
+          <input class="form-control" type="text" placeholder="{{this.id}} . {{this.name}}" readonly>
+        {{/if}}
+      {{/each}}
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+    </div>
+    <div class="col-sm">
+        <form class="create-form">
+
+          <div class="form-group">
+            <label for="ca">Burger Name:</label>
+            <input type="text" id="ca" name="name">
+          </div>
+          <button class="button" type="submit">Add Burger!</button>
+        </form>
+    </div>
+    <div class="col-sm">
+    </div>
+  </div>
+</div>
+
+
+
+
+
